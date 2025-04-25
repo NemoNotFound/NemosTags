@@ -1,10 +1,10 @@
 # Changelog v1.0
 
 ## Additions
-- Added block tag **bars**
+- Added the block tag **bars**
 
 ## Changes
-- Conversion progress calculation for zombie villagers now also checks for the tag **bars**
-- Iron bars/glass panes now also attach to blocks in the tag **bars** and **glass_panes**
-- Walls now also attach to blocks in the tag **bars** and **glass_panes**
-- IronBarsBlock's constructor is public now
+- The conversion progress calculation for zombie villagers now also checks for the **bars** tag.
+- Iron bars and glass panes now also attach to blocks in the **bars** and **glass_panes** tags.
+- Walls now also attach to blocks in the **bars** and **glass_panes** tags.
+- The constructor of **IronBarsBlock** is now public.
