@@ -13,6 +13,6 @@ public class WallBlockMixin {
 
     @ModifyReturnValue(method = "connectsTo", at = @At(value = "RETURN"))
     private boolean isBars(boolean original, @Local(argsOnly = true) BlockState blockState) {
-        return original || blockState.is(ModBlockTags.BARS);
+        return original || blockState.is(ModBlockTags.BARS) || blockState.is(ModBlockTags.GLASS_PANES);
     }
 }

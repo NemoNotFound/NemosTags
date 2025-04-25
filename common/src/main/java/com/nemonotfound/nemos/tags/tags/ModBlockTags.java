@@ -12,6 +12,7 @@ public class ModBlockTags {
     private ModBlockTags() {}
 
     public static final TagKey<Block> BARS = create("bars");
+    public static final TagKey<Block> GLASS_PANES = create("glass_panes");
 
     private static TagKey<Block> create(String id) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, id));
