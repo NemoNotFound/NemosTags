@@ -10,11 +10,16 @@ base {
 
 mixin {
     config("${mod_id}.mixins.json")
+    config("${mod_id}.forge.mixins.json")
+}
+
+tasks.named("assemble").configure {
+    dependsOn("jarJar")
 }
 
 jar {
     manifest {
-        attributes["MixinConfigs"] = "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
+        attributes["MixinConfigs"] = "${mod_id}.mixins.json, ${mod_id}.forge.mixins.json"
     }
 }
 
@@ -72,6 +77,18 @@ minecraft {
 }
 
 sourceSets.main.resources { srcDir project.project(':common').file('src/generated/resources/').getAbsolutePath() }
+
+repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Minecraft'
+                url = uri("https://libraries.minecraft.net")
+            }
+        }
+        filter { includeModule("org.lwjgl", "lwjgl-freetype") }
+    }
+}
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"

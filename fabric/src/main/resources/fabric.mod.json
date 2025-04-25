@@ -16,7 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "com.nemonotfound.nemos.tags.NemosTagsFabric"
+        ],
+        "fabric-datagen": [
+            "com.nemonotfound.nemos.tags.DataGenerator"
         ]
     },
     "mixins": [

@@ -10,9 +10,9 @@ base {
 neoForge {
     version = neoforge_version
     // Automatically enable neoforge AccessTransformers if the file exists
-    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    def at = project(':common').file('src/main/resources/META-INF/common/accesstransformer.cfg')
     if (at.exists()) {
-        accessTransformers.add(at.absolutePath)
+        accessTransformers.from(at.absolutePath)
     }
     parchment {
         minecraftVersion = parchment_minecraft
@@ -25,11 +25,6 @@ neoForge {
         }
         client {
             client()
-        }
-        data {
-            data()
-
-            programArguments.addAll '--mod', project.mod_id, '--all', '--output', project.project(':common').file('src/generated/resources/').getAbsolutePath(), '--existing', project.project(':common').file('src/main/resources/').getAbsolutePath()
         }
         server {
             server()
