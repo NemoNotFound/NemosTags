@@ -1,4 +1,4 @@
-![Nemo's Tags](https://github.com/NemoNotFound/NemoNotFound/blob/master/resources/minecraft_projects/titles/png/nemo_tags.png?raw=true)
+![Nemo's Tags](https://github.com/NemoNotFound/NemoNotFound/blob/master/resources/minecraft_projects/titles/png/nemos_tags.png?raw=true)
 <br><br>
 
 # Description
