@@ -19,11 +19,11 @@ public class IronBarsBlockMixin {
 
     @ModifyReturnValue(method = "attachsTo", at = @At(value = "RETURN"))
     private boolean isBars(boolean original, @Local(argsOnly = true) BlockState blockState) {
-        return original || blockState.is(ModBlockTags.BARS) || blockState.is(ModBlockTags.ALL_GLASS_PANES);
+        return original || blockState.is(ModBlockTags.ATTACHES_TO_PANE_AND_BARS);
     }
 
     @ModifyExpressionValue(method = "skipRendering", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;is(Lnet/minecraft/world/level/block/Block;)Z"))
-    private boolean isBarsOrGlassPanes(boolean original, @Local(argsOnly = true, ordinal = 0) BlockState blockState, @Local(argsOnly = true, ordinal = 1) BlockState adjacentBlockState) {
+    private boolean skipRendering(boolean original, @Local(argsOnly = true, ordinal = 0) BlockState blockState, @Local(argsOnly = true, ordinal = 1) BlockState adjacentBlockState) {
         List<TagKey<Block>> paneTags = List.of(
                 ModBlockTags.BARS,
                 ModBlockTags.GLASS_PANES,

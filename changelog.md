@@ -1,44 +1,17 @@
-# Changelog v1.1
+# Changelog v1.2
 
 ## Additions
-- Added the block tag **all_glass_panes** to group all glass pane variants together.
-- Added individual block tags for each stained glass pane color:
-    - **brown_stained_glass_panes**
-    - **blue_stained_glass_panes**
-    - **light_blue_stained_glass_panes**
-    - **cyan_stained_glass_panes**
-    - **red_stained_glass_panes**
-    - **black_stained_glass_panes**
-    - **yellow_stained_glass_panes**
-    - **orange_stained_glass_panes**
-    - **green_stained_glass_panes**
-    - **lime_stained_glass_panes**
-    - **purple_stained_glass_panes**
-    - **pink_stained_glass_panes**
-    - **magenta_stained_glass_panes**
-    - **light_gray_stained_glass_panes**
-    - **gray_stained_glass_panes**
-    - **white_stained_glass_panes**
+- Added the block tag **attaches_to_pane_and_bars**, containing tags:
+  - **all_glass_panes**
+  - **bars**
+- Added the block tag **connects_to_wall**, containing tags:
+  - **all_glass_panes**
+  - **bars**
+- Added the block tag **powered_rails**, containing:
+  - Powered Rail
 
 ## Changes
-- Iron bars and glass panes now attach to blocks in the **all_glass_panes** tag instead of just **glass_panes**.
-- Walls now also attach to blocks in the **all_glass_panes** tag.
-- Iron bars and glass panes now skip rendering between two blocks if both block states are found in the same tag.
-  The following tags are considered for render skipping:
-    - **glass_panes**
-    - **brown_stained_glass_panes**
-    - **blue_stained_glass_panes**
-    - **light_blue_stained_glass_panes**
-    - **cyan_stained_glass_panes**
-    - **red_stained_glass_panes**
-    - **black_stained_glass_panes**
-    - **yellow_stained_glass_panes**
-    - **orange_stained_glass_panes**
-    - **green_stained_glass_panes**
-    - **lime_stained_glass_panes**
-    - **purple_stained_glass_panes**
-    - **pink_stained_glass_panes**
-    - **magenta_stained_glass_panes**
-    - **light_gray_stained_glass_panes**
-    - **gray_stained_glass_panes**
-    - **white_stained_glass_panes**
+- Iron bars and glass panes now attach to blocks in the **attaches_to_pane_and_bars** tag instead of directly checking **all_glass_panes** and **bars**.
+- Walls now connect to blocks in the **connects_to_wall** tag.
+- The **all_glass_panes** tag now uses the individual pane tags as its default values.
+- The redstone direction detection logic has been updated to check for blocks in the **powered_rails** block tag.

@@ -30,6 +30,9 @@ public class ModBlockTags {
     public static final TagKey<Block> LIGHT_GRAY_STAINED_GLASS_PANES = create("light_gray_stained_glass_panes");
     public static final TagKey<Block> GRAY_STAINED_GLASS_PANES = create("gray_stained_glass_panes");
     public static final TagKey<Block> WHITE_STAINED_GLASS_PANES = create("white_stained_glass_panes");
+    public static final TagKey<Block> CONNECTS_TO_WALL = create("connects_to_wall");
+    public static final TagKey<Block> ATTACHES_TO_PANE_AND_BARS = create("attaches_to_pane_and_bars");
+    public static final TagKey<Block> POWERED_RAILS = create("powered_rails");
 
     private static TagKey<Block> create(String id) {
         return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(MOD_ID, id));

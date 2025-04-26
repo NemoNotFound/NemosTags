@@ -1,8 +1,9 @@
 # Block Changes
-## Iron Bars
-- The attachment logic has been updated to allow attachment to blocks in the **bars** and **all_glass_panes** block tags.
+## Iron Bars & Glass Panes
+- The attachment logic has been updated to allow attachment to blocks in the **attaches_to_panes_and_bars** block tag.
 - The rendering logic has been updated to skip rendering between connected blocks if both are in the same pane-related tag.
   The following tags are currently considered:
+  - **bars**
   - **glass_panes**
   - **brown_stained_glass_panes**
   - **light_blue_stained_glass_panes**
@@ -21,15 +22,14 @@
   - **gray_stained_glass_panes**
   - **white_stained_glass_panes**
 
-## Glass Panes
-- The attachment logic has been updated to allow attachment to blocks in the **bars** and **all_glass_panes** block tags.
-- The rendering logic has been updated to skip rendering between connected blocks if both are in the same pane-related tag.
-
 ## Walls
-- The connection logic has been updated to allow connection to blocks in the **bars** and **all_glass_panes** block tags.
+- The connection logic has been updated to allow connection to blocks in the **attaches_to_panes_and_bars** block tag.
 
 ---
 
 # Entity Changes
 ## Zombie Villager
 - The conversion progress calculation for zombie villagers now also checks for the **bars** block tag.
+
+## Minecart
+- **Fabric and Forge only**: The redstone direction detection logic has been updated to check for blocks in the **powered_rails** block tag.
