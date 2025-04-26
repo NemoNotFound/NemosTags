@@ -19,7 +19,7 @@ public class BlockTagsProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(ModBlockTags.BARS)
                 .add(Blocks.IRON_BARS);
 
-        getOrCreateTagBuilder(ModBlockTags.GLASS_PANES)
+        getOrCreateTagBuilder(ModBlockTags.ALL_GLASS_PANES)
                 .add(Blocks.GLASS_PANE)
                 .add(Blocks.BROWN_STAINED_GLASS_PANE)
                 .add(Blocks.BLUE_STAINED_GLASS_PANE)
@@ -36,6 +36,57 @@ public class BlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.MAGENTA_STAINED_GLASS_PANE)
                 .add(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE)
                 .add(Blocks.GRAY_STAINED_GLASS_PANE)
+                .add(Blocks.WHITE_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.GLASS_PANES)
+                .add(Blocks.GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.BROWN_STAINED_GLASS_PANES)
+                .add(Blocks.BROWN_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.BLUE_STAINED_GLASS_PANES)
+                .add(Blocks.BLUE_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.LIGHT_BLUE_STAINED_GLASS_PANES)
+                .add(Blocks.LIGHT_BLUE_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.CYAN_STAINED_GLASS_PANES)
+                .add(Blocks.CYAN_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.RED_STAINED_GLASS_PANES)
+                .add(Blocks.RED_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.BLACK_STAINED_GLASS_PANES)
+                .add(Blocks.BLACK_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.YELLOW_STAINED_GLASS_PANES)
+                .add(Blocks.YELLOW_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.ORANGE_STAINED_GLASS_PANES)
+                .add(Blocks.ORANGE_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.GREEN_STAINED_GLASS_PANES)
+                .add(Blocks.GREEN_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.LIME_STAINED_GLASS_PANES)
+                .add(Blocks.LIME_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.PURPLE_STAINED_GLASS_PANES)
+                .add(Blocks.PURPLE_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.PINK_STAINED_GLASS_PANES)
+                .add(Blocks.PINK_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.MAGENTA_STAINED_GLASS_PANES)
+                .add(Blocks.MAGENTA_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.LIGHT_GRAY_STAINED_GLASS_PANES)
+                .add(Blocks.LIGHT_GRAY_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.GRAY_STAINED_GLASS_PANES)
+                .add(Blocks.GRAY_STAINED_GLASS_PANE);
+
+        getOrCreateTagBuilder(ModBlockTags.WHITE_STAINED_GLASS_PANES)
                 .add(Blocks.WHITE_STAINED_GLASS_PANE);
     }
 }
