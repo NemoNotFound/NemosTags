@@ -2,7 +2,7 @@ package com.nemonotfound.nemos.tags.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.sugar.Local;
-import com.nemonotfound.nemos.tags.tags.ModBlockTags;
+import com.nemonotfound.nemos.tags.tags.NemosBlockTags;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,6 +13,6 @@ public class WallBlockMixin {
 
     @ModifyReturnValue(method = "connectsTo", at = @At(value = "RETURN"))
     private boolean isBars(boolean original, @Local(argsOnly = true) BlockState blockState) {
-        return original || blockState.is(ModBlockTags.CONNECTS_TO_WALL);
+        return original || blockState.is(NemosBlockTags.CONNECTS_TO_WALL);
     }
 }

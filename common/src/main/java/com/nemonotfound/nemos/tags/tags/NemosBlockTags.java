@@ -7,9 +7,9 @@ import net.minecraft.world.level.block.Block;
 
 import static com.nemonotfound.nemos.tags.Constants.MOD_ID;
 
-public class ModBlockTags {
+public class NemosBlockTags {
 
-    private ModBlockTags() {}
+    private NemosBlockTags() {}
 
     public static final TagKey<Block> BARS = create("bars");
     public static final TagKey<Block> GLASS_PANES = create("glass_panes");

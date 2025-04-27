@@ -5,7 +5,12 @@
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AbstractMinecartMixin"
+    "AbstractMinecartMixin",
+    "BeehiveBlockMixin",
+    "BoggedMixin",
+    "MushroomCowMixin",
+    "SheepMixin",
+    "SnowGolemMixin"
   ],
   "client": [],
   "server": [],
