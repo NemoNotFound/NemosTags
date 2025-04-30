@@ -14,6 +14,8 @@ public class NemosItemTags {
     public static final TagKey<Item> SHEARS = create("shears");
     public static final TagKey<Item> EMPTY_BUCKETS = create("empty_buckets");
     public static final TagKey<Item> WATER_BUCKETS = create("water_buckets");
+    public static final TagKey<Item> LAVA_BUCKETS = create("lava_buckets");
+    public static final TagKey<Item> POWDER_SNOW_BUCKETS = create("powder_snow_buckets");
 
     private static TagKey<Item> create(String id) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, id));

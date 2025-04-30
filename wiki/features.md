@@ -1,5 +1,5 @@
 # Attach Custom Blocks to Glass Panes and Iron Bars
-Blocks added to the `attaches_to_pane_and_bars` block tag will visually connect to glass panes and iron bars.
+Blocks added to the `attaches_to_panes_and_bars` block tag will visually connect to glass panes and iron bars.
 
 ---
 
@@ -8,7 +8,7 @@ Blocks added to the `connects_to_wall` block tag will visually connect to walls.
 
 ---
 
-# Skip Rendering of Glass Pane or Iron Bars Sides
+# Skip Rendering of Glass Pane and Iron Bar Sides
 The rendering logic has been updated to skip rendering between connected blocks if both blocks are in the same pane-related tag.
 
 The following tags are currently considered:
@@ -35,34 +35,49 @@ The following tags are currently considered:
 
 # Add Custom Shears
 
-To add custom shears, simply add your shears item to the `shears` item tag.  
-Your shears will now be able to destroy and retrieve leaves.
+To add custom shears, simply add your item to the `shears` item tag.  
+Your shears will then be able to break and retrieve leaves.
 
 **Fabric only:**  
-This will also allow your shears to be used on **beehives**, **bogged**, **mushroom cows**, **sheep**, and **snow golems**.
+This also enables your shears to interact with:
+- Beehives
+- Bogged
+- Mushroom Cows
+- Sheep
+- Snow Golems
 
 **Note:**  
-For your shears to work with a dispenser, you need to register them manually.
+To make your shears work with dispensers, you must register them manually.
 
 ---
 
 # Add Custom Buckets
 
-## Milk a Cow/Goat
-To milk a cow or goat, simply:
+## Milking Cows and Goats
+To allow milking with a custom bucket:
 - Add your empty bucket item to the `empty_buckets` item tag
 - Add a key-value pair (empty bucket → milk bucket) to the `BUCKET_TO_MILK_BUCKET` map
 
-## Empty Buckets
-The logic for emptying buckets has been updated to check if the filled bucket is in the `FILLED_BUCKET_TO_EMPTY_BUCKET` map and retrieve the corresponding empty bucket value.  
-To make your custom bucket empty, simply add your filled bucket to the `FILLED_BUCKET_TO_EMPTY_BUCKET` map.
+## Emptying Buckets
+The logic for emptying filled buckets checks if the item is present in the `FILLED_BUCKET_TO_EMPTY_BUCKET` map and returns the corresponding empty bucket.
+
+To support this with a custom bucket, add your filled bucket to the `FILLED_BUCKET_TO_EMPTY_BUCKET` map.
+
+## Filling Buckets
+The logic for filling buckets with vanilla fluids and powder snow checks the corresponding maps.
+
+You can extend the following maps:
+- `EMPTY_BUCKET_TO_WATER_BUCKET`
+- `EMPTY_BUCKET_TO_LAVA_BUCKET`
+- `EMPTY_BUCKET_TO_POWDER_SNOW_BUCKET`
 
 **Note:**
-- To make your custom buckets interact with cauldrons, check out the `CauldronInteraction` class.
-- To make your custom water buckets able to pick up entities, you will need to adapt their logic manually.
+- For cauldron interactions, see the `CauldronInteraction` class.
+- For dispenser support, you need to register dispenser behaviors manually.
+- To allow custom water buckets to pick up entities (like axolotls or fish), you must implement this behavior yourself.
 
 ---
 
 # Custom Powered Rail Detection
-- **Fabric and Forge only:**  
-  The redstone direction detection logic has been updated to check for blocks in the `powered_rails` block tag.
+**Fabric and Forge only:**  
+The redstone direction detection logic now checks for blocks in the `powered_rails` block tag.

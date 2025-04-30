@@ -29,6 +29,36 @@ public class ItemReplacementMaps {
      */
     public static final Map<Item, Item> FILLED_BUCKET_TO_EMPTY_BUCKET = new HashMap<>();
 
+    /**
+     * Maps empty bucket items to their corresponding water-filled bucket items.
+     * <p>
+     * This map is used when picking up water with an empty bucket
+     * to return the appropriate water bucket item.
+     * <p>
+     * The map is modifiable and can be extended to support additional bucket types if needed.
+     */
+    public static final Map<Item, Item> EMPTY_BUCKET_TO_WATER_BUCKET = new HashMap<>();
+
+    /**
+     * Maps empty bucket items to their corresponding lava-filled bucket items.
+     * <p>
+     * This map is used when picking up lava with an empty bucket
+     * to return the appropriate lava bucket item.
+     * <p>
+     * The map is modifiable and can be extended to support additional bucket types if needed.
+     */
+    public static final Map<Item, Item> EMPTY_BUCKET_TO_LAVA_BUCKET = new HashMap<>();
+
+    /**
+     * Maps empty bucket items to their corresponding powder snow-filled bucket items.
+     * <p>
+     * This map is used when picking up powder snow with an empty bucket,
+     * returning the appropriate powder snow bucket item.
+     * <p>
+     * The map is modifiable and can be extended to support additional bucket types if needed.
+     */
+    public static final Map<Item, Item> EMPTY_BUCKET_TO_POWDER_SNOW_BUCKET = new HashMap<>();
+
     private ItemReplacementMaps() {}
 
     static {
@@ -37,5 +67,11 @@ public class ItemReplacementMaps {
         FILLED_BUCKET_TO_EMPTY_BUCKET.put(Items.LAVA_BUCKET, Items.BUCKET);
         FILLED_BUCKET_TO_EMPTY_BUCKET.put(Items.WATER_BUCKET, Items.BUCKET);
         FILLED_BUCKET_TO_EMPTY_BUCKET.put(Items.POWDER_SNOW_BUCKET, Items.BUCKET);
+
+        EMPTY_BUCKET_TO_WATER_BUCKET.put(Items.BUCKET, Items.WATER_BUCKET);
+
+        EMPTY_BUCKET_TO_LAVA_BUCKET.put(Items.BUCKET, Items.LAVA_BUCKET);
+
+        EMPTY_BUCKET_TO_POWDER_SNOW_BUCKET.put(Items.BUCKET, Items.POWDER_SNOW_BUCKET);
     }
 }

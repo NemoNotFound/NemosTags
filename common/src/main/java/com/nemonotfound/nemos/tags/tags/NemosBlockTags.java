@@ -31,7 +31,7 @@ public class NemosBlockTags {
     public static final TagKey<Block> GRAY_STAINED_GLASS_PANES = create("gray_stained_glass_panes");
     public static final TagKey<Block> WHITE_STAINED_GLASS_PANES = create("white_stained_glass_panes");
     public static final TagKey<Block> CONNECTS_TO_WALL = create("connects_to_wall");
-    public static final TagKey<Block> ATTACHES_TO_PANE_AND_BARS = create("attaches_to_pane_and_bars");
+    public static final TagKey<Block> ATTACHES_TO_PANES_AND_BARS = create("attaches_to_panes_and_bars");
     public static final TagKey<Block> POWERED_RAILS = create("powered_rails");
 
     private static TagKey<Block> create(String id) {

@@ -93,7 +93,7 @@ public class BlockTagsProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(NemosBlockTags.BARS)
                 .addTag(NemosBlockTags.ALL_GLASS_PANES);
 
-        getOrCreateTagBuilder(NemosBlockTags.ATTACHES_TO_PANE_AND_BARS)
+        getOrCreateTagBuilder(NemosBlockTags.ATTACHES_TO_PANES_AND_BARS)
                 .addTag(NemosBlockTags.BARS)
                 .addTag(NemosBlockTags.ALL_GLASS_PANES);
 

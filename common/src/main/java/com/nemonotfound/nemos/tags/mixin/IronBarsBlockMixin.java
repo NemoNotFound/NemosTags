@@ -19,7 +19,7 @@ public class IronBarsBlockMixin {
 
     @ModifyReturnValue(method = "attachsTo", at = @At(value = "RETURN"))
     private boolean isBars(boolean original, @Local(argsOnly = true) BlockState blockState) {
-        return original || blockState.is(NemosBlockTags.ATTACHES_TO_PANE_AND_BARS);
+        return original || blockState.is(NemosBlockTags.ATTACHES_TO_PANES_AND_BARS);
     }
 
     @ModifyExpressionValue(method = "skipRendering", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/block/state/BlockState;is(Lnet/minecraft/world/level/block/Block;)Z"))

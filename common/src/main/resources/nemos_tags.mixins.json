@@ -8,7 +8,12 @@
     "AbstractCowMixin",
     "BucketItemMixin",
     "IronBarsBlockMixin",
+    "LavaFluidMixin",
+    "LiquidBlockMixin",
+    "PowderSnowBlockMixin",
+    "SolidBucketItemMixin",
     "WallBlockMixin",
+    "WaterFluidMixin",
     "ZombieVillagerMixin"
   ],
   "client": [],

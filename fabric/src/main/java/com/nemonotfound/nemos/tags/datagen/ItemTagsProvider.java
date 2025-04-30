@@ -24,5 +24,11 @@ public class ItemTagsProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(NemosItemTags.WATER_BUCKETS)
                 .add(Items.WATER_BUCKET);
+
+        getOrCreateTagBuilder(NemosItemTags.LAVA_BUCKETS)
+                .add(Items.LAVA_BUCKET);
+
+        getOrCreateTagBuilder(NemosItemTags.POWDER_SNOW_BUCKETS)
+                .add(Items.POWDER_SNOW_BUCKET);
     }
 }
