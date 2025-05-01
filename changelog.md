@@ -1,4 +1,4 @@
-# Changelog v1.3.1
+# Changelog v1.3.2
 
 ## Fixes
-- Actually fixed an issue where custom buckets could not be used to milk goats.
+- Fixes that shears do not break plants/leaves properly
