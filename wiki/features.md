@@ -11,16 +11,19 @@ This ensures high compatibility with other custom bars that also use this tag.
 ---
 
 # Attach Custom Blocks to Glass Panes and Iron Bars
+
 Blocks added to the `attaches_to_panes_and_bars` block tag will visually connect to glass panes and iron bars.
 
 ---
 
 # Connect Custom Blocks to Walls
+
 Blocks added to the `connects_to_wall` block tag will visually connect to walls.
 
 ---
 
 # Skip Rendering of Glass Pane and Iron Bar Sides
+
 The rendering logic has been updated to skip rendering between connected blocks if both blocks are in the same pane-related tag.
 
 The following tags are currently considered:
@@ -66,16 +69,19 @@ To make your shears work with dispensers, you must register them manually.
 # Add Custom Buckets
 
 ## Milking Cows and Goats
+
 To allow milking with a custom bucket:
 - Add your empty bucket item to the `buckets/empty` item tag
 - Add a key-value pair (empty bucket → milk bucket) to the `BUCKET_TO_MILK_BUCKET` map
 
 ## Emptying Buckets
+
 The logic for emptying filled buckets checks if the item is present in the `FILLED_BUCKET_TO_EMPTY_BUCKET` map and returns the corresponding empty bucket.
 
 To support this with a custom bucket, add your filled bucket to the `FILLED_BUCKET_TO_EMPTY_BUCKET` map.
 
 ## Filling Buckets
+
 The logic for filling buckets with vanilla fluids and powder snow checks the corresponding maps.
 
 You can extend the following maps:
@@ -83,9 +89,24 @@ You can extend the following maps:
 - `EMPTY_BUCKET_TO_LAVA_BUCKET`
 - `EMPTY_BUCKET_TO_POWDER_SNOW_BUCKET`
 
+## Adding Dispenser Behaviour
+
+For dispenser support, you need to register dispenser behaviors manually.  
+Refer to Minecraft's `DispenseItemBehavior` interface for implementation details.
+
+To enable filling custom empty buckets via dispensers, you can use the `nemosTags$pickupBlock` method.  
+Simply cast the liquid or powder snow block to `CustomBucketPickup` to access it.
+
+**Example:**
+```java
+if (blockstate.getBlock() instanceof CustomBucketPickup bucketpickup) {
+    ItemStack itemstack = bucketpickup.pickupBlock(customEmptyBucket, levelAccessor, blockpos, blockstate);
+// Handle the resulting item stack (see vanilla bucket behavior for reference)
+}
+```
+
 **Note:**
 - For cauldron interactions, see the `CauldronInteraction` class.
-- For dispenser support, you need to register dispenser behaviors manually.
 - To allow custom water buckets to pick up entities (like axolotls or fish), you must implement this behavior yourself.
 
 ---
