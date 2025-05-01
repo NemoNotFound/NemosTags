@@ -4,6 +4,7 @@ import com.nemonotfound.nemos.tags.tags.NemosBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
@@ -99,5 +100,8 @@ public class BlockTagsProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(NemosBlockTags.POWERED_RAILS)
                 .add(Blocks.POWERED_RAIL);
+
+        getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(NemosBlockTags.BARS);
     }
 }

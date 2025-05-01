@@ -1,3 +1,15 @@
+# Add Custom Bars
+
+By adding your custom bars to the `bars` block tag, most behavior will work automatically.
+
+- All blocks in the `bars` tag are breakable with a pickaxe.
+- Bars will automatically attach to other panes, bars, and walls.
+- The rendering logic skips rendering between connected blocks if both are in the `bars` tag.
+
+This ensures high compatibility with other custom bars that also use this tag.
+
+---
+
 # Attach Custom Blocks to Glass Panes and Iron Bars
 Blocks added to the `attaches_to_panes_and_bars` block tag will visually connect to glass panes and iron bars.
 
@@ -14,22 +26,22 @@ The rendering logic has been updated to skip rendering between connected blocks 
 The following tags are currently considered:
 - `bars`
 - `glass_panes`
-- `brown_stained_glass_panes`
-- `light_blue_stained_glass_panes`
-- `blue_stained_glass_panes`
-- `cyan_stained_glass_panes`
-- `red_stained_glass_panes`
-- `black_stained_glass_panes`
-- `yellow_stained_glass_panes`
-- `orange_stained_glass_panes`
-- `green_stained_glass_panes`
-- `lime_stained_glass_panes`
-- `purple_stained_glass_panes`
-- `pink_stained_glass_panes`
-- `magenta_stained_glass_panes`
-- `light_gray_stained_glass_panes`
-- `gray_stained_glass_panes`
-- `white_stained_glass_panes`
+- `stained_glass_panes/brown`
+- `stained_glass_panes/light_blue`
+- `stained_glass_panes/blue`
+- `stained_glass_panes/cyan`
+- `stained_glass_panes/red`
+- `stained_glass_panes/black`
+- `stained_glass_panes/yellow`
+- `stained_glass_panes/orange`
+- `stained_glass_panes/green`
+- `stained_glass_panes/lime`
+- `stained_glass_panes/purple`
+- `stained_glass_panes/pink`
+- `stained_glass_panes/magenta`
+- `stained_glass_panes/light_gray`
+- `stained_glass_panes/gray`
+- `stained_glass_panes/white`
 
 ---
 
@@ -55,7 +67,7 @@ To make your shears work with dispensers, you must register them manually.
 
 ## Milking Cows and Goats
 To allow milking with a custom bucket:
-- Add your empty bucket item to the `empty_buckets` item tag
+- Add your empty bucket item to the `buckets/empty` item tag
 - Add a key-value pair (empty bucket → milk bucket) to the `BUCKET_TO_MILK_BUCKET` map
 
 ## Emptying Buckets
