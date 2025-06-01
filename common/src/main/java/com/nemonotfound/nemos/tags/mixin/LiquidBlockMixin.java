@@ -30,7 +30,7 @@ public class LiquidBlockMixin implements CustomBucketPickup {
 
     @ModifyExpressionValue(method = "pickupBlock", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/material/FlowingFluid;getBucket()Lnet/minecraft/world/item/Item;"))
     private Item getFilledBucket(Item original, @Local(argsOnly = true) LivingEntity entity) {
-        if (entity == null) {
+        if (entity == null || !(fluid instanceof CustomBucketItemGetter)) {
             return original;
         }
 
