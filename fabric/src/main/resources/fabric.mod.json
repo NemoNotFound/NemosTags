@@ -16,10 +16,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.nemonotfound.nemos.tags.NemosTagsFabric"
+            "com.devnemo.nemos.tags.NemosTagsFabric"
         ],
         "fabric-datagen": [
-            "com.nemonotfound.nemos.tags.DataGenerator"
+            "com.devnemo.nemos.tags.DataGenerator"
         ]
     },
     "mixins": [
@@ -29,7 +29,7 @@
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
         "fabric-api": "*",
-        "minecraft": "${minecraft_version}",
+        "minecraft": ">=${minecraft_version}",
         "java": ">=${java_version}"
     },
     "suggests": {

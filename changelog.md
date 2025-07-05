@@ -1,4 +1,5 @@
-# Changelog v1.3.5
+# Changelog v2.0
 
-## Fixes
-- Fix crashes with custom fluids
+## Breaking Changes
+- Refactored internal code structure
+  - **For Developers:** Package naming changed from `nemonotfound` to `devnemo`
