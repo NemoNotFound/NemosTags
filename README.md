@@ -6,7 +6,7 @@
 This helps ensure that items, blocks, tools, and more from different mods can work together more seamlessly.
 
 In addition to new tags, **Nemo’s Tags** also modifies and extends parts of Minecraft’s internal logic to make it more flexible and modder-friendly.
-For more information check the [wiki](https://github.com/NemoNotFound/NemosTags/wiki).
+For more information check the [wiki](https://wiki.devnemo.com/projects/minecraft-mods/nemos-tags/general).
 <br>
 
 # Downloads
